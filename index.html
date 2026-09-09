@@ -5,10 +5,12 @@
   <title>Goods Japan - Business Plan</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  
   <style>
     :root { --theme-color: #C41E3A; }
     body { font-family: 'Noto Sans Thai', sans-serif; font-size: 16px; line-height: 1.6; }
@@ -20,11 +22,20 @@
     .markdown-section table th { background-color: #f8f8f8; }
     .markdown-section blockquote { border-left-width: 4px; border-radius: 4px; padding: 16px 16px 16px 24px; margin: 20px 0; background-color: #f8f9fa; }
     .markdown-section blockquote > p:first-child { font-weight: bold; margin-top: 0; }
-    .mermaid { background-color: #fcfcfc; padding: 20px; border-radius: 8px; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; justify-content: center; }
+    .mermaid { background-color: #fcfcfc; padding: 20px; border-radius: 8px; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; justify-content: center; overflow-x: auto;}
+    /* Hide the raw code before mermaid renders */
+    .mermaid[data-processed="true"] { display: flex; }
   </style>
 </head>
 <body>
   <div id="app">กำลังโหลดแผนธุรกิจ...</div>
+  
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: false, theme: 'default', fontFamily: 'Noto Sans Thai' });
+    window.mermaid = mermaid;
+  </script>
+
   <script>
     window. = {
       name: '🌸 Goods Japan<br>Business Plan',
@@ -32,15 +43,41 @@
       auto2top: true,
       maxLevel: 4,
       subMaxLevel: 2,
-      search: 'auto'
+      search: 'auto',
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "mermaid") {
+              return '<div class="mermaid">' + code + '</div>';
+            }
+            return this.origin.code.apply(this, arguments);
+          },
+          blockquote: function(quote) {
+            if (quote.includes('[!IMPORTANT]') || quote.includes('[!CAUTION]')) {
+              return <blockquote style="border-left-color: #C41E3A; background-color: #fff8f8;"></blockquote>;
+            }
+            if (quote.includes('[!TIP]') || quote.includes('[!NOTE]')) {
+              return <blockquote style="border-left-color: #2ea44f; background-color: #f0fdf4;"></blockquote>;
+            }
+            return <blockquote></blockquote>;
+          }
+        }
+      },
+      plugins: [
+        function(hook, vm) {
+          hook.doneEach(function() {
+            if (window.mermaid) {
+              window.mermaid.run({ querySelector: '.mermaid' }).catch(function(err) {
+                console.error("Mermaid error:", err);
+              });
+            }
+          });
+        }
+      ]
     }
   </script>
+  
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({ startOnLoad: true, theme: 'default', fontFamily: 'Noto Sans Thai' });
-  </script>
-  <script src="//unpkg.com/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 </body>
