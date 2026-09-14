@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
@@ -37,7 +37,7 @@
   </script>
 
   <script>
-    window. = {
+    window.$docsify = {
       name: '🌸 Goods Japan<br>Business Plan',
       repo: '',
       auto2top: true,
@@ -54,12 +54,12 @@
           },
           blockquote: function(quote) {
             if (quote.includes('[!IMPORTANT]') || quote.includes('[!CAUTION]')) {
-              return <blockquote style="border-left-color: #C41E3A; background-color: #fff8f8;"></blockquote>;
+              return '<blockquote style="border-left-color: #C41E3A; background-color: #fff8f8;">' + quote + '</blockquote>';
             }
             if (quote.includes('[!TIP]') || quote.includes('[!NOTE]')) {
-              return <blockquote style="border-left-color: #2ea44f; background-color: #f0fdf4;"></blockquote>;
+              return '<blockquote style="border-left-color: #2ea44f; background-color: #f0fdf4;">' + quote + '</blockquote>';
             }
-            return <blockquote></blockquote>;
+            return '<blockquote>' + quote + '</blockquote>';
           }
         }
       },
