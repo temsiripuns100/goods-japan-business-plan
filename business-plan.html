@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนธุรกิจ Goods Japan (กูดส์ เจแปน) - ฉบับเปิดร้าน 11.11 ปตท. คลอง 4</title>
+    <meta name="description" content="แผนธุรกิจฉบับสมบูรณ์ ร้านขายของมือสองญี่ปุ่น Goods Japan สาขาปั๊ม ปตท. คลอง 4 ปทุมธานี">
+    <link rel="icon" href="assets/images/logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        jpRed: '#C41E3A',
+                        jpNavy: '#1B2A4A',
+                        jpGold: '#D4AF37',
+                        jpCream: '#FDFBF7',
+                        jpGray: '#F4F5F7'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans Thai"', '"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .custom-shadow { box-shadow: 0 10px 30px -5px rgba(27, 42, 74, 0.08); }
+        .gradient-header { background: linear-gradient(135deg, #1B2A4A 0%, #2A3F68 100%); }
+        @media print {
+            .no-print { display: none !important; }
+            body { font-size: 12pt; background: #fff; }
+        }
+    </style>
+</head>
+<body class="bg-jpCream text-gray-800 font-sans antialiased selection:bg-jpRed selection:text-white">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl">🎌</span>
+                <span class="font-bold text-xl text-jpNavy tracking-tight">GOODS JAPAN</span>
+                <span class="hidden sm:inline-block bg-red-100 text-jpRed text-xs font-semibold px-2.5 py-0.5 rounded-full">แผนธุรกิจ 11.11 ปตท. คลอง 4</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#summary" class="hover:text-jpRed transition">ภาพรวม</a>
+                <a href="#location" class="hover:text-jpRed transition">ทำเล & ผังร้าน</a>
+                <a href="#financials" class="hover:text-jpRed transition">การเงิน & จุดคุ้มทุน</a>
+                <a href="#staffing" class="hover:text-jpRed transition">การบริหาร & สัญญา</a>
+                <a href="#pricing" class="hover:text-jpRed transition">สินค้า & ราคา</a>
+                <a href="#marketing" class="hover:text-jpRed transition">การตลาด</a>
+                <a href="#checklist" class="hover:text-jpRed transition text-jpRed font-semibold">Checklist 11.11</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <button onclick="window.print()" class="px-3 py-1.5 text-xs font-medium border border-gray-300 rounded-lg hover:bg-gray-100 transition flex items-center gap-1">
+                    🖨️ พิมพ์ / PDF
+                </button>
+                <a href="index.html" class="px-3 py-1.5 text-xs font-medium bg-jpNavy text-white rounded-lg hover:bg-opacity-90 transition">
+                    หน้าเว็บหลัก
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Executive Banner -->
+    <section class="gradient-header text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto text-center space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-jpGold text-xs font-semibold tracking-wider uppercase">
+                🚀 ปรับปรุงล่าสุด: ตุลาคม 2569 | ฉบับเปิดตัว Grand Opening
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
+                แผนธุรกิจและการเปิดร้าน Goods Japan (กูดส์ เจแปน)
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto font-light">
+                ร้านสินค้ามือสองญี่ปุ่นรูปแบบ Open Air ในสถานีบริการน้ำมัน ปตท. คลอง 4 ปทุมธานี<br>
+                กำหนดเปิดตัวอย่างเป็นทางการ: <strong class="text-jpGold font-semibold">11 พฤศจิกายน 2569 (11.11)</strong>
+            </p>
+            <div class="pt-4 flex flex-wrap justify-center gap-4 text-sm">
+                <div class="bg-white/10 px-4 py-2 rounded-lg border border-white/10">
+                    <span class="text-gray-300">ค่าเช่าพื้นที่:</span> <strong class="text-white">฿10,000/เดือน</strong>
+                </div>
+                <div class="bg-white/10 px-4 py-2 rounded-lg border border-white/10">
+                    <span class="text-gray-300">ต้นทุนคงที่:</span> <strong class="text-emerald-400">~฿26,500/เดือน</strong>
+                </div>
+                <div class="bg-white/10 px-4 py-2 rounded-lg border border-white/10">
+                    <span class="text-gray-300">จุดคุ้มทุน (Break-even):</span> <strong class="text-jpGold font-bold">฿48,180/เดือน (~฿1,600/วัน)</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+        <!-- 1. สรุปผู้บริหาร (Executive Summary) -->
+        <section id="summary" class="bg-white rounded-2xl p-8 custom-shadow border border-gray-100">
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-4 mb-6">
+                <span class="text-2xl p-2 bg-red-50 text-jpRed rounded-xl">📌</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-jpNavy">1. สรุปผู้บริหาร (Executive Summary)</h2>
+                    <p class="text-sm text-gray-500">วิสัยทัศน์ โมเดลธุรกิจ และเป้าหมายการดำเนินงาน</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-amber-50/60 p-5 rounded-xl border border-amber-100">
+                    <h4 class="font-bold text-amber-900 mb-2">🏪 ปัจจัยความสำเร็จของทำเล</h4>
+                    <p class="text-sm text-amber-800 leading-relaxed">
+                        ตั้งในปั๊มน้ำมัน ปตท. คลอง 4 มี Traffic ธรรมชาติจากลูกค้า Café Amazon, 7-Eleven และคนเลิกงานแวะเติมน้ำมัน มีที่จอดรถกว้างขวาง ปลอดภัย แสงสว่าง 24 ชม.
+                    </p>
+                </div>
+                <div class="bg-emerald-50/60 p-5 rounded-xl border border-emerald-100">
+                    <h4 class="font-bold text-emerald-900 mb-2">⚡ โมเดล Open Air คืนทุนไว</h4>
+                    <p class="text-sm text-emerald-800 leading-relaxed">
+                        เปิดโล่งไร้กระจก เข้าถึงง่าย ไม่มีแอร์ทำให้ประหยัดค่าไฟมหาศาล (เหลือเพียง ~800-1,000 บ./ด.) ดึงดูดอารมณ์อยากคุ้ย (Treasure Hunt) ได้ดีที่สุด
+                    </p>
+                </div>
+                <div class="bg-blue-50/60 p-5 rounded-xl border border-blue-100">
+                    <h4 class="font-bold text-blue-900 mb-2">👥 การแบ่งกะทำงานแบบ Prime Time</h4>
+                    <p class="text-sm text-blue-800 leading-relaxed">
+                        พนักงาน 1 คนดูแลช่วงกลางวัน (10.00-17.30 น.) ส่วนผู้จัดการเข้าคุมช่วงหัวค่ำ (17.30-21.30 น.) ซึ่งเป็นชั่วโมงเร่งด่วนที่ยอดขายสูงสุด
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ทำเลที่ตั้งและภาพจำลองผังร้าน 5x5m -->
+        <section id="location" class="bg-white rounded-2xl p-8 custom-shadow border border-gray-100">
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-4 mb-6">
+                <span class="text-2xl p-2 bg-blue-50 text-blue-600 rounded-xl">📍</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-jpNavy">2. ทำเลที่ตั้งและแบบจำลองร้าน 5 x 5 เมตร</h2>
+                    <p class="text-sm text-gray-500">สาขาสถานีบริการน้ำมัน ปตท. คลอง 4 (25 ตารางเมตร)</p>
+                </div>
+            </div>
+
+            <!-- Image Mockup -->
+            <div class="mb-8 rounded-2xl overflow-hidden border border-gray-200 shadow-md">
+                <img src="assets/images/store_5x5.jpg" alt="Goods Japan 5x5m Store Mockup" class="w-full h-auto object-cover max-h-[500px]" onerror="this.src='assets/images/poster.jpg'">
+                <div class="bg-gray-900 text-gray-300 p-4 text-xs flex flex-wrap justify-between items-center gap-2">
+                    <span>📸 ภาพจำลอง 3D หน้าร้านแบบ Open Air จัดของแน่นสไตล์โกดังญี่ปุ่น ชิโมคิตะซาวะ</span>
+                    <span class="text-jpGold">ประตูม้วนเหล็กชัตเตอร์ • ชั้นวางโครงเหล็ก 6 ชั้น • ไฟ Warm White</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 text-sm">
+                <div class="space-y-4">
+                    <h3 class="text-base font-bold text-jpNavy border-l-4 border-jpRed pl-3">จุดเด่นการจัดวางพื้นที่ 5x5 เมตร</h3>
+                    <ul class="space-y-2.5 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-jpRed font-bold">1. ผนังซ้าย (เซรามิกจรดเพดาน):</span> 
+                            <span>ชั้นวางเหล็กดำ 6 ชั้น ใช้ขาตั้งจานแนวตั้ง จุชามราเมน จานลายคราม แก้วเบียร์ได้นับพันใบ</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-jpRed font-bold">2. ผนังขวา (แคมป์ปิ้ง & เสื้อผ้า):</span> 
+                            <span>แผงตะแกรงเหล็กแขวนตะเกียง Coleman คันเบ็ด และเป้สะพาย พร้อมราวแขวนเสื้อผ้า 2 ชั้น</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-jpRed font-bold">3. เกาะกลางร้าน (Low Island):</span> 
+                            <span>โต๊ะลังไม้สนเล่นระดับ 3 ชั้น วางโมเดล ของสะสม ความสูงไม่เกินระดับอกเพื่อเปิดทางสายตา</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-jpRed font-bold">4. หน้าร้าน (Clearance Bins):</span> 
+                            <span>กระบะเทล้อเลื่อน "3 ใบ 100" ดักคนเดินผ่านจาก Café Amazon แวะคุ้ย</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 space-y-3">
+                    <h3 class="text-base font-bold text-jpNavy">ข้อมูลจำเพาะของห้องเช่า</h3>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div class="bg-white p-2.5 rounded border border-gray-150"><strong>ขนาด:</strong> 5.0 x 5.0 ม. (25 ตร.ม.)</div>
+                        <div class="bg-white p-2.5 rounded border border-gray-150"><strong>ค่าเช่า:</strong> ฿10,000 / เดือน</div>
+                        <div class="bg-white p-2.5 rounded border border-gray-150"><strong>ค่าไฟ:</strong> ฿6.50 / หน่วย</div>
+                        <div class="bg-white p-2.5 rounded border border-gray-150"><strong>ค่าน้ำ:</strong> ฿30.00 / หน่วย</div>
+                        <div class="bg-white p-2.5 rounded border border-gray-150"><strong>ระบบล็อก:</strong> ประตูม้วนชัตเตอร์</div>
+                        <div class="bg-white p-2.5 rounded border border-gray-150"><strong>เวลาเปิด:</strong> 10.00 – 21.30 น.</div>
+                    </div>
+                    <p class="text-xs text-gray-500 italic mt-2">
+                        *สัญญาเช่าพื้นที่ทำในนามผู้จัดการร้าน โดยผู้ว่าจ้างเป็นผู้รับผิดชอบโอนจ่ายค่าเช่าและค่าน้ำ-ไฟตามจริง
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. แผนการเงินและจุดคุ้มทุน (Financial Model) -->
+        <section id="financials" class="bg-white rounded-2xl p-8 custom-shadow border border-gray-100">
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-4 mb-6">
+                <span class="text-2xl p-2 bg-emerald-50 text-emerald-600 rounded-xl">💰</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-jpNavy">3. แผนการเงินและจุดคุ้มทุนใหม่ (Break-even Analysis)</h2>
+                    <p class="text-sm text-gray-500">ต้นทุนลดลง 60% จากแผนเดิม คืนทุนเร็วและปลอดภัยสูงสุด</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center mb-8">
+                <div>
+                    <h3 class="text-base font-bold text-jpNavy mb-3">โครงสร้างต้นทุนคงที่ (Fixed Costs) ~฿26,500/เดือน</h3>
+                    <div class="overflow-x-auto text-sm">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-gray-200 text-gray-500 text-xs">
+                                    <th class="py-2">รายการต้นทุน</th>
+                                    <th class="py-2 text-right">จำนวน (บาท)</th>
+                                    <th class="py-2 pl-4">รายละเอียด</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 text-gray-700">
+                                <tr>
+                                    <td class="py-2.5 font-medium">ค่าเช่าพื้นที่ ปตท.</td>
+                                    <td class="py-2.5 text-right font-bold text-jpNavy">10,000</td>
+                                    <td class="py-2.5 pl-4 text-xs text-gray-500">สัญญาในนามผู้จัดการ</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium">ค่าจ้างพนักงาน 1 คน</td>
+                                    <td class="py-2.5 text-right font-bold text-jpNavy">9,100 - 10,500</td>
+                                    <td class="py-2.5 pl-4 text-xs text-gray-500">วันละ ฿350 (ทำ 26-30 วัน)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium">ค่าน้ำ-ค่าไฟ ปตท.</td>
+                                    <td class="py-2.5 text-right font-bold text-jpNavy">1,000 - 1,200</td>
+                                    <td class="py-2.5 pl-4 text-xs text-gray-500">น้ำ ฿30, ไฟ ฿6.50 (ไม่มีแอร์)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium">งบการตลาด & ยิงแอด</td>
+                                    <td class="py-2.5 text-right font-bold text-jpNavy">3,000 - 4,000</td>
+                                    <td class="py-2.5 pl-4 text-xs text-gray-500">FB Ads + TikTok (งบร้าน)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium">ค่าวัสดุเบ็ดเตล็ด</td>
+                                    <td class="py-2.5 text-right font-bold text-jpNavy">1,000 - 1,500</td>
+                                    <td class="py-2.5 pl-4 text-xs text-gray-500">บับเบิ้ล ถุงหิ้ว เทปกาว</td>
+                                </tr>
+                                <tr class="bg-emerald-50/50 font-bold text-emerald-900">
+                                    <td class="py-3">รวมต้นทุนคงที่เฉลี่ย</td>
+                                    <td class="py-3 text-right text-emerald-700 text-base">~26,500</td>
+                                    <td class="py-3 pl-4 text-xs text-emerald-600">ลดลงจากเดิม ฿64,000 ถึง 58%!</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bg-emerald-900 text-white p-6 rounded-2xl space-y-4">
+                    <span class="bg-emerald-800 text-emerald-200 text-xs px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">จุดคุ้มทุนรายวัน & รายเดือน</span>
+                    <div class="space-y-1">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-jpGold">฿48,180 <span class="text-sm font-normal text-gray-300">/ เดือน</span></div>
+                        <p class="text-sm text-emerald-200">เฉลี่ยยอดขายเพียงวันละ <strong class="text-white text-lg">฿1,600</strong> เท่านั้น!</p>
+                    </div>
+                    <p class="text-xs text-emerald-300 leading-relaxed">
+                        คำนวณจาก Gross Margin 55% (ขายจานชาม 10-15 ใบ หรือเก้าอี้สนาม 1-2 ตัวต่อวัน ก็คืนทุนค่าเช่าและเงินเดือนแล้ว)
+                    </p>
+                    <div class="pt-2 border-t border-emerald-800 grid grid-cols-3 gap-2 text-center text-xs">
+                        <div class="bg-emerald-800/50 p-2 rounded">
+                            <span class="block text-gray-400">ยอด ฿60,000</span>
+                            <strong class="text-emerald-300">+฿6,500</strong>
+                        </div>
+                        <div class="bg-emerald-800/50 p-2 rounded">
+                            <span class="block text-gray-400">ยอด ฿100,000</span>
+                            <strong class="text-jpGold font-bold">+฿28,500</strong>
+                        </div>
+                        <div class="bg-emerald-800/50 p-2 rounded">
+                            <span class="block text-gray-400">ยอด ฿150,000</span>
+                            <strong class="text-jpGold font-bold">+฿56,000</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. การจัดการบุคลากรและสัญญา (Staffing & Operations) -->
+        <section id="staffing" class="bg-white rounded-2xl p-8 custom-shadow border border-gray-100">
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-4 mb-6">
+                <span class="text-2xl p-2 bg-purple-50 text-purple-600 rounded-xl">🤝</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-jpNavy">4. การจัดการบุคลากร สัญญาเช่า และข้อตกลงบริหาร</h2>
+                    <p class="text-sm text-gray-500">บทบาทผู้จัดการร้าน (คุณ) และการจ้างพนักงานหน้าร้าน</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 text-sm">
+                <!-- ตารางกะทำงาน -->
+                <div class="border border-gray-200 rounded-xl p-5 space-y-4">
+                    <h3 class="font-bold text-jpNavy text-base">🕒 การจัดกะการทำงาน (Shift Structure)</h3>
+                    <div class="space-y-3">
+                        <div class="p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">
+                            <div class="flex justify-between items-center mb-1">
+                                <strong class="text-jpNavy">กะกลางวัน (10.00 – 17.30 น.)</strong>
+                                <span class="bg-blue-100 text-blue-700 text-xs px-2 py-0.5 rounded">พนักงานหน้าร้าน</span>
+                            </div>
+                            <p class="text-xs text-gray-600">เปิดร้าน เช็ดฝุ่น เติมของลงกระบะ รับลูกค้าจาก Café Amazon ทำงานแบบไป-กลับ ค่าแรง ฿350/วัน</p>
+                        </div>
+                        <div class="p-3 bg-amber-50 rounded-lg border-l-4 border-jpGold">
+                            <div class="flex justify-between items-center mb-1">
+                                <strong class="text-jpNavy">กะค่ำ Prime Time (17.30 – 21.30 น.)</strong>
+                                <span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded font-semibold">ผู้จัดการร้านดูแลเอง 🌟</span>
+                            </div>
+                            <p class="text-xs text-gray-600">ชั่วโมงเร่งด่วนคนเลิกงานแวะเข้าปั๊ม เชียร์ขายของมูลค่าสูง ถ่ายคลิป Live ปิดร้าน สรุปยอดลงชีต ล็อกประตูชัตเตอร์</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ข้อตกลงสัญญา -->
+                <div class="border border-gray-200 rounded-xl p-5 space-y-3">
+                    <h3 class="font-bold text-jpNavy text-base">📜 เงื่อนไขสัญญาจ้างบริหาร & การถือสัญญาเช่า</h3>
+                    <ul class="space-y-2 text-xs text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span>✅</span>
+                            <span><strong>สัญญาเช่า ปตท. ในนามผู้จัดการ:</strong> ผู้ว่าจ้างมีหน้าที่รับผิดชอบโอนจ่ายค่าเช่า ฿10,000 + ค่าน้ำไฟตามจริง ให้ผู้จัดการนำไปชำระ</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span>✅</span>
+                            <span><strong>ส่วนแบ่งยอดขายหน้าร้าน:</strong> ผู้จัดการได้รับ <strong>10% ของยอดขายรวม</strong> (จ่ายทุกวันที่ 5 ของเดือน)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span>✅</span>
+                            <span><strong>ส่วนแบ่งยอดขายตลาดนัด:</strong> ผู้จัดการได้รับ <strong>25% ของยอดขาย</strong> สำหรับสต๊อกที่นำออกไปจำหน่ายเองภายนอก</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span>✅</span>
+                            <span><strong>ค่ายิงแอดและค่าแรงพนักงาน:</strong> เป็นเงินกองกลางของร้าน ห้ามหักออกจากส่วนแบ่งผู้จัดการ</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span>✅</span>
+                            <span><strong>สิทธิร่วมหุ้นในอนาคต:</strong> สิทธิพิเศษในการแปลงสภาพเป็นหุ้นส่วนถือหุ้นทุน/กำไรสุทธิหลัง 3 - 6 เดือน</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. กลยุทธ์สินค้าและการตั้งราคา (Pricing Strategy) -->
+        <section id="pricing" class="bg-white rounded-2xl p-8 custom-shadow border border-gray-100">
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-4 mb-6">
+                <span class="text-2xl p-2 bg-amber-50 text-amber-600 rounded-xl">🏷️</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-jpNavy">5. กลยุทธ์สินค้าและการตั้งราคา 3 ระดับ (3-Tier Pricing)</h2>
+                    <p class="text-sm text-gray-500">ดึงดูดลูกค้า Amazon สู่การสร้างกำไรก้อนโต</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 text-sm">
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-2">
+                    <span class="bg-gray-200 text-gray-700 text-xs px-2 py-0.5 rounded font-bold">Tier 1: กองคุ้ยหน้าร้าน</span>
+                    <h4 class="text-lg font-bold text-jpNavy">20 – 50 บาท (3 ชิ้น 100.-)</h4>
+                    <p class="text-xs text-gray-500">เป้าหมาย: ดักคนเดินผ่านให้แวะรื้อ หยิบแบบไม่ต้องคิด</p>
+                    <ul class="text-xs text-gray-700 space-y-1 pt-2 border-t border-gray-200">
+                        <li>• จานขาว ถ้วยน้ำจิ้ม แก้วน้ำทั่วไป</li>
+                        <li>• เสื้อผ้ากระบะเท 3 ตัว 100.-</li>
+                        <li>• พวงกุญแจ ตุ๊กตาตัวเล็ก คละแบบ</li>
+                    </ul>
+                </div>
+
+                <div class="bg-amber-50/60 p-5 rounded-xl border border-amber-200 space-y-2">
+                    <span class="bg-amber-200 text-amber-800 text-xs px-2 py-0.5 rounded font-bold">Tier 2: เกรดคัดสภาพ (ยอดขายหลัก)</span>
+                    <h4 class="text-lg font-bold text-amber-900">80 – 250 บาท</h4>
+                    <p class="text-xs text-amber-700">เป้าหมาย: สร้างยอดขายประจำวัน จ่ายค่าเช่าและเงินเดือน</p>
+                    <ul class="text-xs text-amber-900 space-y-1 pt-2 border-t border-amber-200">
+                        <li>• ชามราเมน จานลายคราม แก้วเบียร์ญี่ปุ่น</li>
+                        <li>• เก้าอี้สนามพับได้ โต๊ะแคมป์ปิ้ง</li>
+                        <li>• เสื้อเชิ้ตลายสก็อต กระโปรงญี่ปุ่น</li>
+                    </ul>
+                </div>
+
+                <div class="bg-red-50/60 p-5 rounded-xl border border-red-200 space-y-2">
+                    <span class="bg-red-200 text-jpRed text-xs px-2 py-0.5 rounded font-bold">Tier 3: งานแบรนด์ / ของสะสม</span>
+                    <h4 class="text-lg font-bold text-red-950">350 – 2,500+ บาท</h4>
+                    <p class="text-xs text-red-700">เป้าหมาย: สร้างกำไรสูงสุด (High Margin 300%+)</p>
+                    <ul class="text-xs text-red-900 space-y-1 pt-2 border-t border-red-200">
+                        <li>• ตราก้นจาน Arita, Tachikichi เซ็ตกล่องไม้</li>
+                        <li>• Snow Peak, Coleman, รอก Shimano</li>
+                        <li>• ฟิกเกอร์อนิเมะกล่องคม, กระเป๋า Porter แท้</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. กลยุทธ์การตลาดและโซเชียล (Marketing Engine) -->
+        <section id="marketing" class="bg-white rounded-2xl p-8 custom-shadow border border-gray-100">
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-4 mb-6">
+                <span class="text-2xl p-2 bg-pink-50 text-pink-600 rounded-xl">📱</span>
+                <div>
+                    <h2 class="text-2xl font-bold text-jpNavy">6. กลยุทธ์การตลาดและโฆษณาออนไลน์ (Agent Skill Engine)</h2>
+                    <p class="text-sm text-gray-500">Facebook Ads รัศมี 8 กม. และคลิปสั้นไวรัล TikTok</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 text-sm">
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-3">
+                    <h4 class="font-bold text-jpNavy">🎯 การยิงแอด Facebook (Hyper-Local Targeting)</h4>
+                    <ul class="text-xs text-gray-600 space-y-2">
+                        <li><strong>รัศมีเป้าหมาย:</strong> ปักหมุด ปั๊ม ปตท. คลอง 4 รัศมี 8 กิโลเมตร</li>
+                        <li><strong>กลุ่มเป้าหมาย:</strong> คนในหมู่บ้านจัดสรร (Centro, Pleno, Supalai, The Plant, Inizio ฯลฯ) อายุ 25–55 ปี</li>
+                        <li><strong>ความสนใจ (Interests):</strong> ตกแต่งบ้าน, ทำอาหาร, คาเฟ่, มินิมอล, แคมป์ปิ้ง, ตกปลา</li>
+                        <li><strong>งบประมาณ:</strong> 100 – 150 บาท/วัน (เน้นช่วงพฤหัสบดี - อาทิตย์)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 space-y-3">
+                    <h4 class="font-bold text-jpNavy">🎬 คอนเทนต์ไวรัล TikTok & Reels</h4>
+                    <ul class="text-xs text-gray-600 space-y-2">
+                        <li><strong>คลิปเปิดกล่องญี่ปุ่น:</strong> ล้วงของจากกระสอบ ลุ้นของแรร์ สร้าง FOMO</li>
+                        <li><strong>คลิปทายราคา:</strong> ส่องจาน Arita พลิกตราประทับ เฉลยราคา 79 บาท (สร้างคอมเมนต์)</li>
+                        <li><strong>คลิปพิกัดลับ:</strong> ถือแก้ว Amazon เดินเลี้ยวเข้ามาร้าน Goods Japan</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. แผนเปิดร้าน 11.11 & Interactive Checklist -->
+        <section id="checklist" class="bg-white rounded-2xl p-8 custom-shadow border-2 border-jpRed/20">
+            <div class="flex items-center justify-between border-b border-gray-100 pb-4 mb-6">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl p-2 bg-red-100 text-jpRed rounded-xl">🗓️</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-jpNavy">7. แผนปฏิบัติการและ Master Checklist (สู่ 11.11)</h2>
+                        <p class="text-sm text-gray-500">คลิกที่ช่องเพื่อบันทึกสถานะการทำงาน (บันทึกอัตโนมัติ)</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <span id="progressText" class="text-sm font-bold text-jpRed">0 / 22 เสร็จสิ้น</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-8 overflow-hidden">
+                <div id="progressBar" class="bg-jpRed h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+
+            <div class="space-y-8 text-sm">
+                <!-- เฟส 1 -->
+                <div>
+                    <h3 class="font-bold text-jpNavy text-base mb-3 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-xs">1</span>
+                        เฟส 1: เตรียมการ & สัมภาษณ์บุคลากร (15 – 31 ตุลาคม)
+                    </h3>
+                    <div class="space-y-2 pl-8">
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>เซ็นสัญญาเช่าพื้นที่กับทางสถานีบริการ ปตท. (เช็กมิเตอร์น้ำ 30.- / ไฟ 6.5.-)</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>เซ็นสัญญาจ้างบริหารและจัดการร้านกับหุ้นส่วน (ตามร่างฉบับสมบูรณ์)</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>โพสต์รับสมัครพนักงานหญิง 1 คน (ไป-กลับ, วันละ ฿350) ในกลุ่มคนคลองสี่/หางานรังสิต</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>นัดสัมภาษณ์พนักงานที่ Café Amazon ในปั๊ม ปตท. สาขาจริง และคอนเฟิร์มวันเริ่มงาน</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>สั่งซื้อชั้นเหล็กฉาก 5-6 ชั้น, ตะแกรงแขวนผนัง, และสปอตไลท์ Warm White 3000K</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>สั่งทำป้ายร้าน "Goods Japan" (ป้ายผ้า Noren / ป้ายไวนิล)</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>เตรียมอุปกรณ์ห่อของ (บับเบิ้ล, กระดาษห่อ, เทปกาว, ถุงหิ้ว, สติกเกอร์ราคา, ขาตั้งจาน)</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>คัดแยกและทำความสะอาดสินค้าล็อตแรก (เช็ดฝุ่น ล้างคราบเซรามิก)</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>เตรียมเงินทอนหน้าร้าน 2,000 - 3,000 บาท และป้าย QR Code รับเงินโอน</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- เฟส 2 -->
+                <div>
+                    <h3 class="font-bold text-jpNavy text-base mb-3 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs">2</span>
+                        เฟส 2: ย้ายเข้าอาคาร & จัดร้าน (1 – 7 พฤศจิกายน)
+                    </h3>
+                    <div class="space-y-2 pl-8">
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span><strong>1 พ.ย.:</strong> รับมอบกุญแจห้อง, ถ่ายรูปจดเลขมิเตอร์น้ำ-ไฟเริ่มต้น, ทำความสะอาดห้อง</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span><strong>2-3 พ.ย.:</strong> ติดตั้งระบบไฟ Warm White, ปลั๊กไฟ, ประกอบชั้นเหล็กและแขวนตะแกรง</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span><strong>4-5 พ.ย.:</strong> ขนสินค้าเข้าห้อง จัดเรียงขึ้นชั้น (เซรามิกซ้าย, แคมป์ปิ้งขวา, ลังไม้กลางร้าน)</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span><strong>6 พ.ย.:</strong> พนักงานเริ่มงานวันแรก สอนงานห่อของ คิดเงิน ทักทายลูกค้า และช่วยติดป้ายราคา</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span><strong>7 พ.ย.:</strong> ติดม่านกั้นสต๊อกด้านหลัง และเช็กความพร้อมประตูม้วนล็อกร้าน</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- เฟส 3 -->
+                <div>
+                    <h3 class="font-bold text-jpNavy text-base mb-3 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs">3</span>
+                        เฟส 3: ทดลองเปิด Soft Opening (8 – 10 พฤศจิกายน)
+                    </h3>
+                    <div class="space-y-2 pl-8">
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>เปิดม้วนประตูรับลูกค้าจริง ทดสอบการห่อสินค้าและการคิดเงิน</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>ทดสอบบันทึกยอดขายรายวันลง Google Sheets ตอนปิดร้าน 21.30 น.</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>ถ่ายรูปมุมสวยๆ ลงเพจ Facebook และทำคลิป TikTok เปิดร้านใหม่</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>เริ่มยิงแอด Facebook Ads (9 พ.ย.) ปักหมุดรัศมี 8 กม. แจ้งเปิดตัว Grand Opening 11.11</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- เฟส 4 -->
+                <div>
+                    <h3 class="font-bold text-jpNavy text-base mb-3 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-red-100 text-jpRed flex items-center justify-center text-xs">4</span>
+                        เฟส 4: วันเปิดตัวจริง GRAND OPENING (11 พฤศจิกายน 2569) 🎉
+                    </h3>
+                    <div class="space-y-2 pl-8">
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>เปิดแคมเปญโปรโมชั่น 11.11: ไอเทม 11 บาท + เสื้อผ้า 3 ตัว 100 + ของแถมช้อปครบ 300.-</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>ผู้จัดการคุมหน้าร้านเต็มเวลา และไลฟ์สดช่วงหัวค่ำ 17.30 - 21.00 น.</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <input type="checkbox" class="task-check w-4 h-4 rounded text-jpRed focus:ring-jpRed">
+                            <span>สรุปยอดขายวันแรกและวางแผนการเติมสินค้าสัปดาห์ถัดไป!</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-jpNavy text-gray-400 py-12 border-t border-gray-800 text-xs">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+            <p class="text-white font-bold text-sm tracking-wider">GOODS JAPAN (กูดส์ เจแปน) - สาขา ปตท. คลอง 4</p>
+            <p>เอกสารแผนธุรกิจและแผนเปิดร้านฉบับสมบูรณ์ จัดทำเพื่อการดำเนินงานภายในและเสนอต่อหุ้นส่วน</p>
+            <p class="text-gray-500">© 2026 Goods Japan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Checklist Script -->
+    <script>
+        const checkboxes = document.querySelectorAll('.task-check');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const STORAGE_KEY = 'goodsjapan_11_11_checklist';
+
+        function updateProgress() {
+            let checkedCount = 0;
+            const states = [];
+            checkboxes.forEach((cb, index) => {
+                if (cb.checked) checkedCount++;
+                states.push(cb.checked);
+            });
+            const total = checkboxes.length;
+            const percent = Math.round((checkedCount / total) * 100);
+            progressBar.style.width = percent + '%';
+            progressText.innerText = `${checkedCount} / ${total} เสร็จสิ้น (${percent}%)`;
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(states));
+        }
+
+        // Load saved state
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+            try {
+                const states = JSON.parse(saved);
+                checkboxes.forEach((cb, index) => {
+                    if (states[index] !== undefined) cb.checked = states[index];
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        updateProgress();
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', updateProgress);
+        });
+    </script>
+</body>
+</html>
